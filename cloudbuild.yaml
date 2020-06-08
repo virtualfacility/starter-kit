@@ -1,0 +1,13 @@
+steps:
+    # Install node packages
+    - name: 'node:12.16'
+      entrypoint: npm
+      args: ['install']
+
+    # test coverage
+    - name: 'node:12.16'
+      entrypoint: npm
+      args: [
+      'run',
+      'test:ci'
+      ]
